@@ -41,7 +41,7 @@ The system work-profile folder belongs to the device launcher. Liberty cannot pi
 
 Android does not let an ordinary app make screen recordings black while still allowing normal screenshots. Liberty currently blocks neither screenshots nor recordings.
 
-## Build
+## Developer build
 
 Requirements: JDK 17+ and Android SDK 36.
 
@@ -51,6 +51,8 @@ Requirements: JDK 17+ and Android SDK 36.
 ```
 
 The Gradle distribution is pinned by its official SHA-256 checksum, and CI validates the wrapper JAR. Production signing data is read only from environment variables and is never stored in this repository. See [SIGNING.md](SIGNING.md).
+
+The debug APK is intended only for local development and source-code testing. Users and external testers should download the officially signed `Liberty-<version>-release.apk` from [GitHub Releases](https://github.com/yuliamurmur530/liberty/releases). Official releases use a production keystore stored outside this repository; debug certificates are never used for distribution.
 
 ## License and contributions
 
