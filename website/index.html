@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111419">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="Liberty помогает отделить выбранные приложения и их данные от личного профиля средствами Android.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Liberty — ваше право на приватность">
+  <meta property="og:description" content="Важные приложения — в отдельном пространстве Android. Без root, рекламы и аналитики.">
+  <meta property="og:image" content="https://liberty.crinoidea.net/assets/liberty-logo.png">
+  <meta property="og:url" content="https://liberty.crinoidea.net/">
+  <title>Liberty — ваше право на приватность</title>
+  <link rel="icon" type="image/png" href="assets/liberty-logo.png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#content" data-i18n="skip">Перейти к содержимому</a>
+
+  <header class="site-header" data-header>
+    <div class="shell header-inner">
+      <a class="brand" href="#top" aria-label="Liberty">
+        <img src="assets/liberty-logo.png" width="44" height="44" alt="">
+        <span>Liberty</span>
+      </a>
+      <nav class="desktop-nav" aria-label="Основная навигация">
+        <a href="#features" data-i18n="navFeatures">Возможности</a>
+        <a href="#how" data-i18n="navHow">Как работает</a>
+        <a href="#privacy" data-i18n="navPrivacy">Приватность</a>
+      </nav>
+      <div class="header-actions">
+        <button class="language-switch" type="button" data-language aria-label="Switch language">
+          <span data-lang-label>RU</span><span class="slash">/</span><span class="muted">EN</span>
+        </button>
+        <a class="header-download" href="https://github.com/yuliamurmur530/liberty/releases/download/v0.4.8/Liberty-0.4.8-release.apk" data-i18n="navDownload">Скачать</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="content">
+    <section class="hero shell" id="top">
+      <div class="hero-copy">
+        <p class="eyebrow" data-i18n="heroEyebrow">Ваше право на приватность.</p>
+        <h1 data-i18n="heroTitle">Важные приложения —<br>в отдельном пространстве.</h1>
+        <p class="hero-lead" data-i18n="heroLead">Liberty помогает отделить выбранные приложения и их данные от личного профиля средствами Android.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="https://github.com/yuliamurmur530/liberty/releases/download/v0.4.8/Liberty-0.4.8-release.apk">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3v12m0 0 5-5m-5 5-5-5M5 20h14"/></svg>
+            <span data-i18n="download">Скачать Liberty</span>
+          </a>
+          <a class="button button-secondary" href="https://github.com/yuliamurmur530/liberty" target="_blank" rel="noopener noreferrer">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m8 9-3 3 3 3m8-6 3 3-3 3m-2-9-4 12"/></svg>
+            <span data-i18n="viewCode">Посмотреть код</span>
+          </a>
+        </div>
+        <ul class="hero-proof" aria-label="Преимущества">
+          <li data-i18n="proofRoot">Без root</li>
+          <li data-i18n="proofAds">Без рекламы</li>
+          <li data-i18n="proofTracking">Без слежки</li>
+        </ul>
+      </div>
+
+      <div class="hero-visual" aria-label="Экраны Liberty">
+        <span class="orbit orbit-one" aria-hidden="true"></span>
+        <span class="orbit orbit-two" aria-hidden="true"></span>
+        <span class="spark" aria-hidden="true">✦</span>
+        <figure class="phone phone-back phone-back-left">
+          <img src="assets/liberty-home.png" alt="Главный экран Liberty: защищённое пространство готово" width="579" height="1280">
+        </figure>
+        <figure class="phone phone-front">
+          <img src="assets/android-work-folder-vpn-on.png" alt="Папка защищённого профиля Android; в строке состояния виден ключ включённого VPN" width="579" height="1280">
+          <figcaption class="vpn-note">
+            <span class="key-symbol" aria-hidden="true">⚿</span>
+            <span data-i18n="vpnNote">Туннель в личном профиле включён</span>
+          </figcaption>
+        </figure>
+        <figure class="phone phone-back phone-back-right">
+          <img src="assets/liberty-space.png" alt="Экран Liberty внутри защищённого профиля" width="579" height="1280">
+        </figure>
+      </div>
+    </section>
+
+    <section class="trust-strip" aria-label="Ключевые свойства">
+      <div class="shell trust-grid">
+        <div><strong>0</strong><span data-i18n="statInternet">разрешений на интернет</span></div>
+        <div><strong>0</strong><span data-i18n="statTelemetry">трекеров и аналитики</span></div>
+        <div><strong>100%</strong><span data-i18n="statLocal">локальная настройка</span></div>
+        <div><strong>Android</strong><span data-i18n="statBoundary">создаёт границу профилей</span></div>
+      </div>
+    </section>
+
+    <section class="section shell" id="how">
+      <div class="section-heading wide-heading">
+        <p class="eyebrow" data-i18n="howEyebrow">Просто и по делу</p>
+        <h2 data-i18n="howTitle">Android создаёт границу.<br><span>Liberty делает её понятной.</span></h2>
+        <p data-i18n="howLead">Несколько понятных шагов — и выбранные приложения живут отдельно от личного профиля.</p>
+      </div>
+      <div class="journey">
+        <article class="journey-card">
+          <div class="step-number">01</div>
+          <div class="journey-copy">
+            <h3 data-i18n="stepOneTitle">Создайте пространство</h3>
+            <p data-i18n="stepOneBody">Liberty открывает системную настройку Android и сопровождает каждый шаг.</p>
+          </div>
+          <div class="step-symbol" aria-hidden="true"><svg viewBox="0 0 180 180"><circle cx="90" cy="90" r="70"/><path d="M55 90h70M90 55v70"/></svg></div>
+        </article>
+        <article class="journey-card">
+          <div class="step-number">02</div>
+          <div class="journey-copy">
+            <h3 data-i18n="stepTwoTitle">Установите приложения</h3>
+            <p data-i18n="stepTwoBody">Используйте Google Play со значком портфеля внутри защищённого профиля.</p>
+          </div>
+          <div class="step-symbol" aria-hidden="true"><svg viewBox="0 0 180 180"><rect x="38" y="54" width="104" height="88" rx="20"/><path d="M70 54V43c0-16 40-16 40 0v11M58 88h64M58 110h42"/></svg></div>
+        </article>
+        <article class="journey-card">
+          <div class="step-number">03</div>
+          <div class="journey-copy">
+            <h3 data-i18n="stepThreeTitle">Открывайте отдельно</h3>
+            <p data-i18n="stepThreeBody">Приложения получают отдельные локальные данные и аккаунты.</p>
+          </div>
+          <div class="step-symbol" aria-hidden="true"><svg viewBox="0 0 180 180"><path d="M90 27 42 47v34c0 33 19 57 48 70 29-13 48-37 48-70V47L90 27Z"/><path d="m66 90 17 17 34-40"/></svg></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section-features" id="features">
+      <div class="shell">
+        <div class="section-heading centered">
+          <p class="eyebrow" data-i18n="featuresEyebrow">Системная защита</p>
+          <h2 data-i18n="featuresTitle">Изоляция, а не маскировка.</h2>
+          <p data-i18n="featuresLead">Границу между личным и защищённым пространством создаёт сама операционная система.</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 4.5 6v5.2c0 4.7 3 8 7.5 9.8 4.5-1.8 7.5-5.1 7.5-9.8V6L12 3Z"/><path d="m8.8 12 2 2 4.5-4.5"/></svg></span>
+            <h3 data-i18n="featureIsolationTitle">Отдельный профиль Android</h3>
+            <p data-i18n="featureIsolationBody">Выбранные приложения отделены от приложений и данных личного профиля системными средствами.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12h16M12 4v16"/><circle cx="12" cy="12" r="9"/></svg></span>
+            <h3 data-i18n="featureRootTitle">Root не нужен</h3>
+            <p data-i18n="featureRootBody">Liberty работает с возможностями, которые уже встроены в Android.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 7h16v10H4z"/><path d="m7 10 10 4m0-4L7 14"/></svg></span>
+            <h3 data-i18n="featureQuietTitle">Без рекламы и аналитики</h3>
+            <p data-i18n="featureQuietBody">В приложении нет рекламных модулей, телеметрии и удалённых сервисов.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 4v16h16"/><path d="m7 15 3-3 3 2 4-6"/></svg></span>
+            <h3 data-i18n="featureInternetTitle">Liberty не выходит в интернет</h3>
+            <p data-i18n="featureInternetBody">У самого приложения нет разрешения на интернет. Настройка выполняется локально на устройстве.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section gallery-section shell">
+      <div class="gallery-copy">
+        <p class="eyebrow" data-i18n="galleryEyebrow">Всё на виду</p>
+        <h2 data-i18n="galleryTitle">Ничего лишнего.<br>Ничего скрытого.</h2>
+        <p data-i18n="galleryBody">Понятные действия, живое состояние пространства и системные значки Android — вы всегда видите, где находятся приложения.</p>
+        <div class="key-callout">
+          <span class="key-icon" aria-hidden="true">⚿</span>
+          <div>
+            <strong data-i18n="keyTitle">Ключ VPN остаётся виден</strong>
+            <p data-i18n="keyBody">На реальном снимке туннель личного профиля включён, а приложения находятся в отдельном пространстве.</p>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-phones" aria-label="Галерея экранов приложения">
+        <figure class="gallery-phone gallery-one"><img src="assets/liberty-home.png" alt="Главный экран Liberty" loading="lazy"></figure>
+        <figure class="gallery-phone gallery-two"><img src="assets/liberty-space.png" alt="Liberty в защищённом профиле" loading="lazy"></figure>
+        <figure class="gallery-phone gallery-three"><img src="assets/android-work-folder-vpn-on.png" alt="Защищённая папка Android с видимым ключом VPN" loading="lazy"></figure>
+      </div>
+    </section>
+
+    <section class="section privacy-section" id="privacy">
+      <div class="shell privacy-layout">
+        <div class="privacy-mark" aria-hidden="true">
+          <img src="assets/liberty-logo.png" alt="">
+          <span class="privacy-orbit"></span>
+        </div>
+        <div class="privacy-copy">
+          <p class="eyebrow" data-i18n="privacyEyebrow">Приватность по архитектуре</p>
+          <h2 data-i18n="privacyTitle">Ваши данные остаются на устройстве.</h2>
+          <p data-i18n="privacyBody">Liberty не хранит пароли, не читает содержимое изолированных приложений и не отправляет данные наружу.</p>
+          <ul class="check-list">
+            <li data-i18n="privacyItemOne">Нет регистрации в Liberty</li>
+            <li data-i18n="privacyItemTwo">Нет облачного кабинета</li>
+            <li data-i18n="privacyItemThree">Нет доступа к данным других приложений</li>
+            <li data-i18n="privacyItemFour">Исходный код доступен для проверки</li>
+          </ul>
+          <a class="text-link" href="https://github.com/yuliamurmur530/liberty/blob/main/PRIVACY.md" target="_blank" rel="noopener noreferrer" data-i18n="readPrivacy">Открыть политику конфиденциальности <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section download-section shell" id="download">
+      <div class="download-card">
+        <span class="download-spark" aria-hidden="true">✦</span>
+        <div class="download-copy">
+          <p class="eyebrow" data-i18n="downloadEyebrow">Liberty 0.4.8</p>
+          <h2 data-i18n="downloadTitle">Создайте своё защищённое пространство.</h2>
+          <p data-i18n="downloadBody">Ваши приложения. Ваши правила. Только на вашем устройстве.</p>
+        </div>
+        <div class="download-actions">
+          <a class="button button-primary button-large" href="https://github.com/yuliamurmur530/liberty/releases/download/v0.4.8/Liberty-0.4.8-release.apk">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3v12m0 0 5-5m-5 5-5-5M5 20h14"/></svg>
+            <span data-i18n="downloadApk">Скачать APK</span>
+          </a>
+          <a class="release-link" href="https://github.com/yuliamurmur530/liberty/releases/tag/v0.4.8" target="_blank" rel="noopener noreferrer" data-i18n="releasePage">Страница релиза ↗</a>
+        </div>
+      </div>
+      <details class="verification">
+        <summary data-i18n="verifyTitle">Проверить загруженный файл</summary>
+        <div class="verification-grid">
+          <div><span>SHA-256 APK</span><code>6FC46BA76B9DC9C4656145AF073C567424B364745245865FF8AC7AA85C792D49</code></div>
+          <div><span data-i18n="certLabel">SHA-256 сертификата подписи</span><code>3C10F7CC83E0868226CEF3699EBCA9E982730DD298DFCD8F81155AD8F66A96C7</code></div>
+        </div>
+      </details>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <a class="brand footer-brand" href="#top" aria-label="Liberty">
+        <img src="assets/liberty-logo.png" width="38" height="38" alt="">
+        <span>Liberty</span>
+      </a>
+      <p>© 2026 Liberty</p>
+      <nav aria-label="Ссылки в подвале">
+        <a href="https://github.com/yuliamurmur530/liberty/blob/main/PRIVACY.md" target="_blank" rel="noopener noreferrer" data-i18n="footerPrivacy">Конфиденциальность</a>
+        <a href="https://github.com/yuliamurmur530/liberty/blob/main/SECURITY.md" target="_blank" rel="noopener noreferrer" data-i18n="footerSecurity">Безопасность</a>
+        <a href="https://github.com/yuliamurmur530/liberty" target="_blank" rel="noopener noreferrer" data-i18n="footerSource">Исходный код</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
