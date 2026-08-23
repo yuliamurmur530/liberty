@@ -61,7 +61,7 @@ public final class MainActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (!enforceOfficialSignature()) {
+        if (!enforceReleaseSignature()) {
             return;
         }
         policyManager = getSystemService(DevicePolicyManager.class);

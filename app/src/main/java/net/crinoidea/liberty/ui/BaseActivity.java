@@ -19,7 +19,7 @@ abstract class BaseActivity extends Activity {
         super.attachBaseContext(LocaleController.wrap(base));
     }
 
-    protected boolean enforceOfficialSignature() {
+    protected boolean enforceReleaseSignature() {
         if (SignatureVerifier.isTrusted(this)) {
             return true;
         }

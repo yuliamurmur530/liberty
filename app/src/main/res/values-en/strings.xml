@@ -76,8 +76,8 @@
     <string name="back">Back</string>
     <string name="admin_description">Liberty manages only the protected space it creates to separate its apps from the personal profile.</string>
     <string name="organization_name">Liberty</string>
-    <string name="signature_error_title">Unofficial build</string>
-    <string name="signature_error_body">This app signature does not match the official Liberty certificate. Creating and managing the protected space has been blocked for your safety.</string>
+    <string name="signature_error_title">Build verification failed</string>
+    <string name="signature_error_body">This app signature does not match the Liberty release certificate. Creating and managing the protected space has been blocked for your safety.</string>
     <string name="language_prompt_ru">Выберите язык</string>
     <string name="language_prompt_en">Choose language</string>
     <string name="language_intro_ru">Язык можно изменить позже в Liberty.</string>
@@ -99,7 +99,7 @@
     <string name="privacy_third_party_title">Third-party apps</string>
     <string name="privacy_third_party_body">Apps in the protected space operate under their own terms and privacy policies. Their network traffic does not pass through Liberty.</string>
     <string name="privacy_control_title">You remain in control</string>
-    <string name="privacy_control_body">Only after your explicit confirmation can Liberty ask Android to remove the protected space it manages. This deletes its apps and local data, but not personal-profile data. You can also remove Liberty through Android system settings. The official policy is available at liberty.crinoidea.net/privacy.</string>
+    <string name="privacy_control_body">Only after your explicit confirmation can Liberty ask Android to remove the protected space it manages. This deletes its apps and local data, but not personal-profile data. You can also remove Liberty through Android system settings. The policy is available at liberty.crinoidea.net/privacy.</string>
     <string name="privacy_open_website">Open policy on the website</string>
     <string name="privacy_continue">Review and continue</string>
     <string name="close">Close</string>

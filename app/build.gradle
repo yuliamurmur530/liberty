@@ -32,12 +32,12 @@ android {
         debug {
             applicationIdSuffix = ".debug"
             versionNameSuffix = "-debug"
-            resValue "bool", "enforce_official_signature", "false"
+            resValue "bool", "enforce_release_signature", "false"
         }
         release {
             minifyEnabled = true
             shrinkResources = true
-            resValue "bool", "enforce_official_signature", "true"
+            resValue "bool", "enforce_release_signature", "true"
             proguardFiles getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
             if (libertyKeystorePath && libertyKeystorePassword) {
                 signingConfig = signingConfigs.libertyProduction

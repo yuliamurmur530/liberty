@@ -14,7 +14,7 @@ public final class LanguageActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (!enforceOfficialSignature()) {
+        if (!enforceReleaseSignature()) {
             return;
         }
         setContentView(R.layout.activity_language);

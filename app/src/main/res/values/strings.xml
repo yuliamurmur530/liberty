@@ -76,8 +76,8 @@
     <string name="back">Назад</string>
     <string name="admin_description">Liberty управляет только созданным ею защищённым пространством, чтобы отделить его приложения от личного профиля.</string>
     <string name="organization_name">Liberty</string>
-    <string name="signature_error_title">Неофициальная сборка</string>
-    <string name="signature_error_body">Подпись приложения не совпадает с официальным сертификатом Liberty. Для вашей безопасности создание и управление защищённым пространством заблокировано.</string>
+    <string name="signature_error_title">Сборка не прошла проверку</string>
+    <string name="signature_error_body">Подпись приложения не совпадает с сертификатом релизов Liberty. Для вашей безопасности создание и управление защищённым пространством заблокировано.</string>
     <string name="language_prompt_ru">Выберите язык</string>
     <string name="language_prompt_en">Choose language</string>
     <string name="language_intro_ru">Язык можно изменить позже в Liberty.</string>
@@ -99,7 +99,7 @@
     <string name="privacy_third_party_title">Сторонние приложения</string>
     <string name="privacy_third_party_body">Приложения в защищённом пространстве работают по собственным правилам и политикам конфиденциальности. Их сетевой обмен не проходит через Liberty.</string>
     <string name="privacy_control_title">Контроль остаётся у вас</string>
-    <string name="privacy_control_body">Только после вашего явного подтверждения Liberty может попросить Android удалить управляемое ею защищённое пространство. При этом удаляются находящиеся в нём приложения и локальные данные, но не данные личного профиля. Liberty также можно удалить через системные настройки Android. Официальная версия политики доступна на liberty.crinoidea.net/privacy.</string>
+    <string name="privacy_control_body">Только после вашего явного подтверждения Liberty может попросить Android удалить управляемое ею защищённое пространство. При этом удаляются находящиеся в нём приложения и локальные данные, но не данные личного профиля. Liberty также можно удалить через системные настройки Android. Текст политики доступен на liberty.crinoidea.net/privacy.</string>
     <string name="privacy_open_website">Открыть политику на сайте</string>
     <string name="privacy_continue">Ознакомиться и продолжить</string>
     <string name="close">Закрыть</string>

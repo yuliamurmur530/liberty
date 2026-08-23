@@ -1,6 +1,6 @@
 # Подпись Liberty
 
-Официальный package name: `net.crinoidea.liberty`.
+Package name: `net.crinoidea.liberty`.
 
 Production signing key хранится отдельно от проекта и сервера. Gradle читает путь, alias и пароли только из переменных окружения:
 

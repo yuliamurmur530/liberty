@@ -14,7 +14,7 @@ public final class ProfileRemovalActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (!enforceOfficialSignature()) {
+        if (!enforceReleaseSignature()) {
             return;
         }
 

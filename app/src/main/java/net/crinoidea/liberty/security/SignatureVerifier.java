@@ -12,8 +12,8 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 public final class SignatureVerifier {
-    private static final String OFFICIAL_PACKAGE = "net.crinoidea.liberty";
-    private static final byte[] OFFICIAL_CERTIFICATE_SHA256 = fromHex(
+    private static final String EXPECTED_PACKAGE = "net.crinoidea.liberty";
+    private static final byte[] EXPECTED_CERTIFICATE_SHA256 = fromHex(
             "3c10f7cc83e0868226cef3699ebca9e982730dd298dfcd8f81155ad8f66a96c7"
     );
 
@@ -21,10 +21,10 @@ public final class SignatureVerifier {
     }
 
     public static boolean isTrusted(Context context) {
-        if (!context.getResources().getBoolean(R.bool.enforce_official_signature)) {
+        if (!context.getResources().getBoolean(R.bool.enforce_release_signature)) {
             return true;
         }
-        if (!OFFICIAL_PACKAGE.equals(context.getPackageName())) {
+        if (!EXPECTED_PACKAGE.equals(context.getPackageName())) {
             return false;
         }
 
@@ -45,7 +45,7 @@ public final class SignatureVerifier {
             MessageDigest digest = MessageDigest.getInstance("SHA-256");
             for (Signature signature : signatures) {
                 if (MessageDigest.isEqual(
-                        OFFICIAL_CERTIFICATE_SHA256,
+                        EXPECTED_CERTIFICATE_SHA256,
                         digest.digest(signature.toByteArray())
                 )) {
                     return true;

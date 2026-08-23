@@ -16,7 +16,7 @@ public final class PolicyComplianceActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (!enforceOfficialSignature()) {
+        if (!enforceReleaseSignature()) {
             setResult(RESULT_CANCELED);
             return;
         }
