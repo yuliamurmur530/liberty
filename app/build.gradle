@@ -1,0 +1,56 @@
+apply plugin: "com.android.application"
+
+def libertyKeystorePath = System.getenv("LIBERTY_KEYSTORE_PATH")
+def libertyKeystorePassword = System.getenv("LIBERTY_KEYSTORE_PASSWORD")
+
+android {
+    namespace = "net.crinoidea.liberty"
+    compileSdk = 36
+
+    defaultConfig {
+        applicationId = "net.crinoidea.liberty"
+        minSdk = 28
+        targetSdk = 36
+        versionCode = 24
+        versionName = "0.4.8"
+
+        resourceConfigurations += ["ru", "en"]
+    }
+
+    signingConfigs {
+        if (libertyKeystorePath && libertyKeystorePassword) {
+            libertyProduction {
+                storeFile = file(libertyKeystorePath)
+                storePassword = libertyKeystorePassword
+                keyAlias = System.getenv("LIBERTY_KEY_ALIAS") ?: "liberty-production"
+                keyPassword = System.getenv("LIBERTY_KEY_PASSWORD") ?: libertyKeystorePassword
+            }
+        }
+    }
+
+    buildTypes {
+        debug {
+            applicationIdSuffix = ".debug"
+            versionNameSuffix = "-debug"
+            resValue "bool", "enforce_official_signature", "false"
+        }
+        release {
+            minifyEnabled = true
+            shrinkResources = true
+            resValue "bool", "enforce_official_signature", "true"
+            proguardFiles getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
+            if (libertyKeystorePath && libertyKeystorePassword) {
+                signingConfig = signingConfigs.libertyProduction
+            }
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
+    buildFeatures {
+        buildConfig = false
+    }
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="asphalt_950">#16191D</color>
+    <color name="asphalt_900">#1E2227</color>
+    <color name="asphalt_850">#252A30</color>
+    <color name="asphalt_800">#2C3239</color>
+    <color name="asphalt_700">#3A424B</color>
+    <color name="steel_300">#AEB7C0</color>
+    <color name="steel_100">#E8ECEF</color>
+    <color name="white_soft">#F8FAFB</color>
+    <color name="liberty_gold">#C9AA72</color>
+    <color name="liberty_gold_pressed">#B79458</color>
+    <color name="success">#79B89B</color>
+    <color name="transparent">#00000000</color>
+</resources>

@@ -1,0 +1,4 @@
+-keep class net.crinoidea.liberty.admin.LibertyAdminReceiver { *; }
+-keep class net.crinoidea.liberty.ui.PolicyComplianceActivity { *; }
+-keepattributes RuntimeVisibleAnnotations,AnnotationDefault
+-allowaccessmodification
