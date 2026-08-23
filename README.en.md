@@ -4,7 +4,11 @@
 
 > **Status: public alpha.** Liberty is under open testing. Public source improves auditability, but it is not a security certification and cannot guarantee that the software is free of defects.
 
-Liberty is a lightweight, local Android device-policy controller. It asks Android to create a managed work profile, giving selected apps a system-enforced boundary from the personal profile without root.
+Liberty helps separate selected apps from the apps and data in the personal profile. It starts Android's system flow for creating a protected space — a managed work profile. Root is not required because Android enforces the isolation.
+
+Do not add VPN apps to the protected space. Add apps that should be separated from the personal profile, including services where VPN use is undesirable. They cannot obtain the personal profile's app list and use separate local data and accounts.
+
+After creating the space, install the required apps through the Google Play icon carrying the briefcase badge. Liberty does not disable VPN or control routing. On the device used for Liberty's initial testing, protected-profile apps connected directly even while a tunnel was active in the personal profile.
 
 Android application ID: `net.crinoidea.liberty`. Project website: `https://liberty.crinoidea.net`.
 
