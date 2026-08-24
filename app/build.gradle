@@ -11,8 +11,8 @@ android {
         applicationId = "net.crinoidea.liberty"
         minSdk = 28
         targetSdk = 36
-        versionCode = 24
-        versionName = "0.4.8"
+        versionCode = 25
+        versionName = "0.4.9"
 
         resourceConfigurations += ["ru", "en"]
     }
