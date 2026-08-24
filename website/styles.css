@@ -23,15 +23,6 @@
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; overflow-x: hidden; }
 body { margin: 0; min-width: 320px; background: var(--bg); color: var(--text); overflow-x: hidden; }
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  opacity: .22;
-  z-index: 50;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.055'/%3E%3C/svg%3E");
-}
 a { color: inherit; text-decoration: none; }
 img { display: block; max-width: 100%; }
 button, a { -webkit-tap-highlight-color: transparent; }
@@ -60,6 +51,102 @@ button { font: inherit; }
 .language-switch .slash { margin-inline: 5px; color: #656a72; }
 .language-switch .muted { color: #7e838b; }
 .header-download { border: 1px solid var(--line); border-radius: 999px; padding: 10px 18px; font-size: 14px; }
+.desktop-nav { display: none; }
+.header-actions { margin-left: auto; }
+
+.concept-hero {
+  position: relative;
+  min-height: 1125px;
+  overflow: hidden;
+  padding: calc(var(--header-height) + 8px) 0 72px;
+  background-image: url("assets/asphalt-gold-bg.png");
+  background-size: cover;
+  background-position: center top;
+}
+.concept-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(3, 5, 8, .24);
+  pointer-events: none;
+}
+.concept-hero-inner { position: relative; z-index: 1; }
+.concept-intro {
+  min-height: 350px;
+  display: grid;
+  grid-template-columns: minmax(560px, 1fr) minmax(430px, .88fr);
+  align-items: center;
+  gap: 72px;
+}
+.concept-copy h1 {
+  max-width: 760px;
+  font-family: "Segoe UI", Inter, ui-sans-serif, system-ui, sans-serif;
+  font-size: clamp(66px, 5.6vw, 92px);
+  font-weight: 280;
+  line-height: .96;
+  letter-spacing: -.055em;
+}
+.concept-copy { transform: translateY(18px); }
+.concept-copy h1 > span { display: block; }
+.concept-gold { margin-top: 10px; color: var(--gold-bright); }
+.concept-mark {
+  width: clamp(300px, 26vw, 390px);
+  justify-self: center;
+  transform: translateY(-38px);
+  filter: drop-shadow(0 42px 38px rgba(0, 0, 0, .52));
+}
+.concept-mark img { width: 100%; }
+.concept-steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 52px;
+  margin-top: 6px;
+}
+.concept-step { min-width: 0; }
+.concept-step-heading {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 50px;
+}
+.concept-number {
+  flex: 0 0 38px;
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: #17130c;
+  background: var(--gold-bright);
+  font-size: 18px;
+  font-weight: 750;
+}
+.concept-step-heading h2 {
+  flex: 0 0 auto;
+  font-family: "Segoe UI", Inter, ui-sans-serif, system-ui, sans-serif;
+  font-size: 18px;
+  font-weight: 540;
+  line-height: 1.25;
+  letter-spacing: -.015em;
+  white-space: nowrap;
+}
+.concept-rule { flex: 1; min-width: 24px; border-top: 2px solid var(--gold-bright); opacity: .88; }
+.concept-screen {
+  height: 625px;
+  margin: 11px 0 0;
+  overflow: hidden;
+  border: 1px solid rgba(232, 191, 115, .64);
+  border-radius: 28px 28px 0 0;
+  background: #0d1014;
+  box-shadow: 0 28px 58px rgba(0, 0, 0, .42);
+}
+.concept-screen img { width: 100%; height: auto; }
+.concept-actions {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 34px;
+}
 
 .hero {
   min-height: 820px;
@@ -187,6 +274,14 @@ h2 span { color: var(--gold); }
 
 @media (max-width: 1220px) {
   :root { --shell: min(1120px, calc(100% - 56px)); }
+  .concept-hero { min-height: 1030px; }
+  .concept-intro { min-height: 350px; grid-template-columns: 1fr .72fr; gap: 42px; }
+  .concept-copy h1 { font-size: clamp(58px, 6.2vw, 76px); }
+  .concept-steps { gap: 26px; }
+  .concept-step-heading { gap: 10px; }
+  .concept-step-heading h2 { font-size: 15px; }
+  .concept-number { flex-basis: 34px; width: 34px; height: 34px; font-size: 16px; }
+  .concept-screen { height: 560px; border-radius: 24px 24px 0 0; }
   .hero { grid-template-columns: .9fr 1.1fr; }
   .hero-visual { transform: scale(.88); transform-origin: center; }
   .phone-back { width: 270px; }
@@ -200,6 +295,15 @@ h2 span { color: var(--gold); }
   :root { --header-height: 74px; }
   .desktop-nav, .header-download { display: none; }
   .header-actions { margin-left: auto; }
+  .concept-hero { min-height: auto; padding-top: 112px; background-position: 62% top; }
+  .concept-intro { min-height: 330px; grid-template-columns: 1.08fr .72fr; gap: 24px; }
+  .concept-copy h1 { font-size: clamp(48px, 7.1vw, 64px); }
+  .concept-copy { transform: none; }
+  .concept-mark { width: clamp(220px, 31vw, 300px); }
+  .concept-steps { grid-template-columns: 1fr; gap: 42px; margin-top: 30px; }
+  .concept-step-heading h2 { font-size: 18px; }
+  .concept-screen { height: min(760px, 118vw); border-radius: 28px 28px 0 0; }
+  .concept-screen img { width: 100%; }
   .hero { padding-top: 130px; grid-template-columns: minmax(0, 1fr); text-align: center; min-height: auto; }
   .hero-copy { max-width: 790px; margin-inline: auto; }
   .hero-lead { margin-inline: auto; }
@@ -222,6 +326,17 @@ h2 span { color: var(--gold); }
   .brand { font-size: 21px; }
   .brand img { width: 39px; height: 39px; }
   main { width: 100%; overflow: hidden; }
+  .concept-hero { padding-top: 108px; padding-bottom: 58px; background-position: 68% top; }
+  .concept-intro { min-height: 0; grid-template-columns: 1fr; gap: 28px; }
+  .concept-copy h1 { font-size: clamp(47px, 14vw, 64px); line-height: .98; }
+  .concept-mark { width: 210px; justify-self: end; margin-right: 2%; transform: none; }
+  .concept-steps { margin-top: 42px; gap: 40px; }
+  .concept-step-heading { gap: 10px; }
+  .concept-step-heading h2 { font-size: 16px; white-space: normal; }
+  .concept-rule { min-width: 12px; }
+  .concept-number { flex-basis: 34px; width: 34px; height: 34px; }
+  .concept-screen { height: min(720px, 154vw); border-radius: 24px 24px 0 0; }
+  .concept-actions { display: grid; grid-template-columns: 1fr; }
   .hero { width: calc(100% - 36px); max-width: calc(100vw - 36px); padding-top: 123px; padding-bottom: 50px; }
   .eyebrow { margin-bottom: 18px; font-size: 11px; }
   h1 { font-size: clamp(43px, 12vw, 61px); }
