@@ -18,12 +18,12 @@
     <string name="profile_ready_title">Your protected space is ready</string>
     <string name="profile_ready_body">Apps in the protected profile are kept separate from the rest and open through Liberty.</string>
     <string name="profile_open_title">Everything is ready</string>
-    <string name="profile_open_body">Tap “Open protected space”. Configure the settings you need. Find the folder on your phone that contains apps with briefcase badges. To isolate apps, do not tap “+” inside this folder. Install the apps you want to isolate through the briefcase-badged Google Play icon at the bottom. After installation, the matching app shortcut will disappear from the regular home screen.</string>
+    <string name="profile_open_body">Tap “Open protected space”. Android may show protected apps in a separate folder, on a Work tab, or as briefcase-badged icons on the regular home screen—the phone launcher decides this. The apps remain isolated in every case. Install them through the briefcase-badged Google Play inside Liberty.</string>
     <string name="open_protected_space">Open protected space</string>
     <string name="opening_protected_space">Opening…</string>
     <string name="open_protected_space_failed">Automatic opening did not work. Find the briefcase-badged Liberty app in your app list — that is your protected space.</string>
     <string name="open_help_title">Did the space not open?</string>
-    <string name="open_help_body">Some Android launchers do not switch protected areas automatically. Open your app list and tap the briefcase-badged Liberty app.</string>
+    <string name="open_help_body">Not every phone creates a folder. This is normal and does not affect isolation. Open the app list or Work tab and tap the briefcase-badged Liberty app.</string>
     <string name="retry">Try again</string>
     <string name="understood">Got it</string>
     <string name="remove_liberty_and_space">Remove Liberty and protected space</string>
@@ -51,6 +51,7 @@
     <string name="network_launch_blocked_body">Liberty will not open the protected app while Android reports a VPN or HTTP proxy, or while the active network cannot be determined.</string>
     <string name="network_check_again">Check again</string>
     <string name="protected_apps">Protected apps</string>
+    <string name="protected_apps_location_note">Scroll down to see every app. Android may show them in a folder, on a Work tab, or as briefcase-badged icons.</string>
     <string name="add_apps">Install apps</string>
     <string name="add_apps_help_title">Install an isolated app</string>
     <string name="add_apps_help_body">Liberty will open the system store inside the protected profile. Apps installed there are separate copies with a briefcase badge. Do not use the “+” in a system folder: on some phones it opens the personal copy and does not guarantee isolation.</string>
