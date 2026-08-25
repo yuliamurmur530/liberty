@@ -77,10 +77,16 @@ document.querySelectorAll("[data-i18n]").forEach((element) => {
 function setLanguage(language) {
   const isEnglish = language === "en";
   document.documentElement.lang = isEnglish ? "en" : "ru";
+  document.documentElement.dataset.locale = isEnglish ? "en" : "ru";
 
   document.querySelectorAll("[data-i18n]").forEach((element) => {
     const key = element.dataset.i18n;
     element.innerHTML = isEnglish ? (translations.en[key] ?? original.get(key)) : original.get(key);
+  });
+
+  document.querySelectorAll("img[data-src-ru][data-src-en]").forEach((image) => {
+    image.src = isEnglish ? image.dataset.srcEn : image.dataset.srcRu;
+    image.alt = isEnglish ? image.dataset.altEn : image.dataset.altRu;
   });
 
   const button = document.querySelector("[data-language]");

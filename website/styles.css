@@ -322,7 +322,7 @@ h2 span { color: var(--gold); }
   .brand img { width: 34px; height: 34px; border-radius: 10px; }
   .language-switch { padding: 8px 4px; font-size: 13px; }
   main { width: 100%; overflow: hidden; }
-  .concept-hero { padding-top: 82px; padding-bottom: 40px; background-position: 68% top; }
+  .concept-hero { padding-top: 82px; padding-bottom: 40px; background-position: 90% top; }
   .concept-intro { min-height: 0; grid-template-columns: 1fr; gap: 16px; text-align: center; }
   .concept-copy h1 { font-size: clamp(37px, 11vw, 46px); line-height: 1; }
   .concept-mark { width: 145px; justify-self: center; margin: 0; transform: none; }

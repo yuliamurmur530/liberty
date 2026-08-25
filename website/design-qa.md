@@ -1,32 +1,35 @@
-# Liberty website design QA — two-line hero heading
+# Liberty website design QA — mobile light and localized screenshots
 
 ## Evidence
 
-- Source visual truth: `C:\Users\coc\AppData\Local\Temp\codex-clipboard-480aac49-0850-439b-8ad3-f0b62c34cce4.png`
-- Rendered desktop implementation: `C:\Users\coc\Documents\Codex\2026-08-22\new-chat\outputs\liberty-heading-two-lines-desktop.png`
-- Rendered mobile implementation: `C:\Users\coc\Documents\Codex\2026-08-22\new-chat\outputs\liberty-heading-mobile.png`
-- Focused source/implementation comparison: `C:\Users\coc\Documents\Codex\2026-08-22\new-chat\outputs\liberty-heading-comparison.png`
-- Desktop viewport: 1920 × 1080 CSS px. Mobile viewport: 390 × 844 CSS px.
+- Source mobile view: `C:\Users\coc\AppData\Local\Temp\codex-clipboard-d9eeb5a7-d207-43ba-a961-53cc27d2b52f.png`
+- Rendered English mobile view: `C:\Users\coc\Documents\Codex\2026-08-22\new-chat\outputs\liberty-mobile-en-qa.png`
+- Rendered Russian mobile view: `C:\Users\coc\Documents\Codex\2026-08-22\new-chat\outputs\liberty-mobile-ru-qa.png`
+- Rendered desktop view: `C:\Users\coc\Documents\Codex\2026-08-22\new-chat\outputs\liberty-desktop-qa.png`
+- Source/implementation comparison: `C:\Users\coc\Documents\Codex\2026-08-22\new-chat\outputs\liberty-mobile-source-vs-qa-8bit.png`
+- Tested viewports: 390 × 844 CSS px and 1920 × 1080 CSS px.
 
 ## Findings
 
 - No actionable P0/P1/P2 findings remain.
-- Desktop typography: `Android создаёт границу.` and `Liberty делает её понятной.` each occupy exactly one 58.24 px-high line at a readable 56 px font size.
-- English typography: both translated phrases also occupy one desktop line at 56 px.
-- The heading column was widened and the mark column tightened without changing the selected composition, screenshots, actions, background, or visual hierarchy.
-- Mobile typography intentionally returns to normal wrapping at 390 px instead of shrinking excessively; the page has no horizontal overflow.
-- Console check: no warnings or errors were introduced by the heading change.
+- Mobile background is positioned at 90% horizontally, so the warm reflection on the wet asphalt remains visible behind the first screen.
+- Desktop keeps its centered background composition and the original visual hierarchy.
+- RU mode uses the original Russian screenshots; EN mode swaps all four displayed app images to dedicated English screenshots.
+- The language switch no longer shares an attribute with the document locale marker, preventing page content from being replaced by the switch label.
+- Both mobile modes have no horizontal overflow.
+- Fresh-page console check returned no warnings or errors.
 
 ## User-directed departure
 
-- The supplied screenshot marked only the heading for correction. All unrelated regions were preserved.
+- English app screenshots are faithful localized copies for the website only. Layout, logo, colors, controls, and Android chrome are preserved; only visible interface text changes.
 
 ## Implementation checklist
 
-- [x] Put each Russian phrase on one desktop line.
-- [x] Keep the heading large and readable.
-- [x] Keep English phrases on one desktop line.
-- [x] Preserve responsive mobile wrapping without horizontal overflow.
-- [x] Preserve the rest of the first screen.
+- [x] Keep the gold asphalt reflection visible on mobile.
+- [x] Keep the existing desktop composition.
+- [x] Show Russian screenshots in Russian mode.
+- [x] Show English screenshots in English mode.
+- [x] Preserve responsive layout without horizontal overflow.
+- [x] Verify a clean browser console.
 
 final result: passed
