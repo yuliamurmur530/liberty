@@ -56,9 +56,9 @@ button { font: inherit; }
 
 .concept-hero {
   position: relative;
-  min-height: 780px;
+  min-height: 700px;
   overflow: hidden;
-  padding: calc(var(--header-height) + 12px) 0 42px;
+  padding: calc(var(--header-height) + 24px) 0 64px;
   background-image: url("assets/asphalt-gold-bg.png");
   background-size: cover;
   background-position: center top;
@@ -70,13 +70,12 @@ button { font: inherit; }
   background: rgba(3, 5, 8, .24);
   pointer-events: none;
 }
-.concept-hero-inner { position: relative; z-index: 1; }
+.concept-hero-inner { position: relative; z-index: 1; min-height: 600px; display: grid; align-items: center; }
 .concept-intro {
-  min-height: 240px;
   display: grid;
-  grid-template-columns: minmax(720px, 1fr) minmax(210px, .42fr);
+  grid-template-columns: minmax(640px, 1fr) minmax(260px, .52fr);
   align-items: center;
-  gap: 28px;
+  gap: 48px;
 }
 .concept-copy h1 {
   max-width: 850px;
@@ -89,65 +88,22 @@ button { font: inherit; }
 .concept-copy { transform: translateY(4px); }
 .concept-copy h1 > span { display: block; white-space: nowrap; }
 .concept-gold { margin-top: 10px; color: var(--gold-bright); }
+.concept-lead { max-width: 650px; margin: 28px 0 0; color: #b9bdc5; font-size: 18px; line-height: 1.65; }
 .concept-mark {
-  width: clamp(210px, 20vw, 270px);
+  width: clamp(270px, 25vw, 360px);
   justify-self: center;
-  transform: translateY(-12px);
+  transform: translateY(-6px);
   filter: drop-shadow(0 28px 28px rgba(0, 0, 0, .48));
 }
 .concept-mark img { width: 100%; }
-.concept-steps {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 30px;
-  width: min(760px, 100%);
-  margin: 4px auto 0;
-}
-.concept-step { min-width: 0; }
-.concept-step-heading {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  min-height: 40px;
-}
-.concept-number {
-  flex: 0 0 30px;
-  width: 30px;
-  height: 30px;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  color: #17130c;
-  background: var(--gold-bright);
-  font-size: 14px;
-  font-weight: 750;
-}
-.concept-step-heading h2 {
-  flex: 0 0 auto;
-  font-family: "Segoe UI", Inter, ui-sans-serif, system-ui, sans-serif;
-  font-size: 15px;
-  font-weight: 540;
-  line-height: 1.25;
-  letter-spacing: -.015em;
-  white-space: nowrap;
-}
-.concept-rule { flex: 1; min-width: 18px; border-top: 1px solid var(--gold-bright); opacity: .82; }
-.concept-screen {
-  height: 430px;
-  margin: 8px 0 0;
-  overflow: hidden;
-  border: 1px solid rgba(232, 191, 115, .64);
-  border-radius: 20px 20px 0 0;
-  background: #0d1014;
-  box-shadow: 0 20px 42px rgba(0, 0, 0, .38);
-}
-.concept-screen img { width: 100%; height: auto; }
 .concept-actions {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 14px;
-  margin-top: 22px;
+  margin-top: 32px;
 }
+.concept-proof { display: flex; flex-wrap: wrap; gap: 12px 24px; padding: 0; margin: 24px 0 0; list-style: none; color: #c7cbd1; font-size: 14px; }
+.concept-proof li::before { content: ""; display: inline-block; width: 5px; height: 5px; margin: 0 9px 2px 0; border-radius: 50%; background: var(--green); }
 
 .hero {
   min-height: 820px;
@@ -223,14 +179,6 @@ h2 span { color: var(--gold); }
 .feature-icon svg { width: 25px; height: 25px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
 .feature-card p { font-size: 15px; }
 
-.gallery-section { display: grid; grid-template-columns: .86fr 1.14fr; gap: 48px; align-items: center; min-height: 620px; }
-.gallery-copy > p:not(.eyebrow) { margin: 29px 0 0; color: var(--muted); font-size: 18px; line-height: 1.65; }
-.gallery-phones { display: flex; justify-content: center; align-items: center; gap: 22px; min-width: 0; }
-.gallery-phone { position: relative; flex: 0 1 230px; width: 230px; height: 506px; margin: 0; overflow: hidden; border: 5px solid #282c32; border-radius: 29px; background: #0d0f12; box-shadow: 0 26px 58px rgba(0,0,0,.48); }
-.gallery-phone img { width: 100%; height: 100%; object-fit: cover; }
-.gallery-one { transform: translateY(18px) rotate(-2deg); }
-.gallery-two { transform: translateY(-18px) rotate(2deg); }
-
 .privacy-section { position: relative; overflow: hidden; background: #0b0d11; border-block: 1px solid var(--line-soft); }
 .privacy-section::before { content: ""; position: absolute; width: 760px; height: 760px; left: -320px; top: 50%; transform: translateY(-50%); border: 1px solid rgba(212,175,112,.16); border-radius: 50%; }
 .privacy-layout { display: grid; grid-template-columns: .8fr 1.2fr; gap: 72px; align-items: center; }
@@ -270,33 +218,27 @@ h2 span { color: var(--gold); }
 
 @media (max-width: 1220px) {
   :root { --shell: min(1080px, calc(100% - 52px)); }
-  .concept-hero { min-height: 740px; }
-  .concept-intro { min-height: 220px; grid-template-columns: minmax(640px, 1fr) minmax(190px, .42fr); gap: 24px; }
+  .concept-hero { min-height: 660px; }
+  .concept-hero-inner { min-height: 550px; }
+  .concept-intro { grid-template-columns: minmax(580px, 1fr) minmax(230px, .48fr); gap: 32px; }
   .concept-copy h1 { max-width: 760px; font-size: clamp(42px, 4.5vw, 52px); }
-  .concept-steps { gap: 24px; }
-  .concept-screen { height: 410px; }
   .hero { grid-template-columns: .9fr 1.1fr; }
   .hero-visual { transform: scale(.88); transform-origin: center; }
   .phone-back { width: 270px; }
   .feature-grid { grid-template-columns: repeat(2, 1fr); }
-  .gallery-section { grid-template-columns: .8fr 1.2fr; gap: 36px; }
-  .gallery-copy { max-width: 560px; }
 }
 
 @media (max-width: 960px) {
   :root { --header-height: 68px; }
   .desktop-nav, .header-download { display: none; }
   .header-actions { margin-left: auto; }
-  .concept-hero { min-height: auto; padding-top: 88px; background-position: 62% top; }
-  .concept-intro { min-height: 205px; grid-template-columns: 1.08fr .62fr; gap: 20px; }
+  .concept-hero { min-height: auto; padding-top: 100px; background-position: 76% top; }
+  .concept-hero-inner { min-height: 570px; }
+  .concept-intro { grid-template-columns: 1.05fr .65fr; gap: 28px; }
   .concept-copy h1 { font-size: clamp(43px, 6.4vw, 56px); }
   .concept-copy h1 > span { white-space: normal; }
   .concept-copy { transform: none; }
-  .concept-mark { width: clamp(180px, 25vw, 230px); }
-  .concept-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; margin-top: 18px; }
-  .concept-step-heading h2 { font-size: 14px; }
-  .concept-screen { height: 390px; border-radius: 20px 20px 0 0; }
-  .concept-screen img { width: 100%; }
+  .concept-mark { width: clamp(210px, 30vw, 280px); }
   .hero { padding-top: 130px; grid-template-columns: minmax(0, 1fr); text-align: center; min-height: auto; }
   .hero-copy { max-width: 790px; margin-inline: auto; }
   .hero-lead { margin-inline: auto; }
@@ -305,8 +247,6 @@ h2 span { color: var(--gold); }
   .journey { grid-template-columns: 1fr; }
   .journey::before { display: none; }
   .journey-card { min-height: 350px; }
-  .gallery-section { grid-template-columns: minmax(0, 1fr); gap: 46px; }
-  .gallery-copy { max-width: 650px; }
   .privacy-layout { grid-template-columns: minmax(0, 1fr); gap: 58px; }
   .privacy-mark img { width: 180px; }
   .privacy-orbit { width: 300px; height: 300px; }
@@ -322,18 +262,15 @@ h2 span { color: var(--gold); }
   .brand img { width: 34px; height: 34px; border-radius: 10px; }
   .language-switch { padding: 8px 4px; font-size: 13px; }
   main { width: 100%; overflow: hidden; }
-  .concept-hero { padding-top: 82px; padding-bottom: 40px; background-position: 90% top; }
+  .concept-hero { padding-top: 100px; padding-bottom: 56px; background-position: 90% top; }
+  .concept-hero-inner { min-height: 660px; }
   .concept-intro { min-height: 0; grid-template-columns: 1fr; gap: 16px; text-align: center; }
   .concept-copy h1 { font-size: clamp(37px, 11vw, 46px); line-height: 1; }
-  .concept-mark { width: 145px; justify-self: center; margin: 0; transform: none; }
-  .concept-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); width: 100%; margin-top: 24px; gap: 12px; }
-  .concept-step-heading { gap: 6px; min-height: 34px; }
-  .concept-step-heading h2 { font-size: 12px; white-space: normal; }
-  .concept-rule { display: none; }
-  .concept-number { flex-basis: 26px; width: 26px; height: 26px; font-size: 12px; }
-  .concept-screen { height: min(330px, 92vw); margin-top: 5px; border-radius: 16px 16px 0 0; }
+  .concept-lead { margin: 24px auto 0; font-size: 16px; line-height: 1.55; }
+  .concept-mark { width: 180px; justify-self: center; margin: 10px 0 0; transform: none; }
   .concept-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-top: 18px; }
   .concept-actions .button { min-height: 50px; padding-inline: 10px; font-size: 13px; }
+  .concept-proof { justify-content: center; gap: 10px 16px; font-size: 12px; }
   .hero { width: calc(100% - 36px); max-width: calc(100vw - 36px); padding-top: 123px; padding-bottom: 50px; }
   .eyebrow { margin-bottom: 18px; font-size: 11px; }
   h1 { font-size: clamp(43px, 12vw, 61px); }
@@ -363,9 +300,6 @@ h2 span { color: var(--gold); }
   .feature-grid { margin-top: 34px; gap: 12px; }
   .feature-card { min-height: 205px; padding: 24px; }
   .feature-icon { margin-bottom: 24px; }
-  .gallery-section { min-height: auto; }
-  .gallery-phones { gap: 10px; width: 100%; }
-  .gallery-phone { flex-basis: min(43vw, 154px); width: min(43vw, 154px); height: min(94vw, 340px); border-width: 3px; border-radius: 21px; }
   .gallery-one { transform: translateY(8px) rotate(-1.5deg); }
   .gallery-two { transform: translateY(-8px) rotate(1.5deg); }
   .privacy-mark img { width: 140px; border-radius: 35px; }

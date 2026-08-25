@@ -84,11 +84,6 @@ function setLanguage(language) {
     element.innerHTML = isEnglish ? (translations.en[key] ?? original.get(key)) : original.get(key);
   });
 
-  document.querySelectorAll("img[data-src-ru][data-src-en]").forEach((image) => {
-    image.src = isEnglish ? image.dataset.srcEn : image.dataset.srcRu;
-    image.alt = isEnglish ? image.dataset.altEn : image.dataset.altRu;
-  });
-
   const button = document.querySelector("[data-language]");
   button.innerHTML = isEnglish
     ? '<span data-lang-label>EN</span><span class="slash">/</span><span class="muted">RU</span>'
