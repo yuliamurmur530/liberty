@@ -96,6 +96,47 @@ button { font: inherit; }
   filter: drop-shadow(0 28px 28px rgba(0, 0, 0, .48));
 }
 .concept-mark img { width: 100%; }
+
+@media (min-width: 961px) {
+  .concept-mark {
+    position: relative;
+    isolation: isolate;
+    transform: translateY(20px);
+    filter: none;
+  }
+  .concept-mark::before,
+  .concept-mark::after {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    pointer-events: none;
+    border-radius: 50%;
+  }
+  .concept-mark::before {
+    left: -5%;
+    right: 13%;
+    bottom: 1%;
+    height: 22%;
+    background: radial-gradient(ellipse at center, rgba(0,0,0,.88) 0%, rgba(0,0,0,.58) 40%, rgba(0,0,0,0) 76%);
+    filter: blur(15px);
+    transform: translate(-5%, 44%) rotate(-5deg) scaleX(1.08);
+    opacity: .92;
+  }
+  .concept-mark::after {
+    left: 16%;
+    right: 7%;
+    bottom: 7%;
+    height: 8%;
+    background: radial-gradient(ellipse at center, rgba(0,0,0,.96), rgba(0,0,0,.72) 48%, rgba(0,0,0,0) 78%);
+    filter: blur(5px);
+    transform: translate(-2%, 55%) rotate(-4deg);
+  }
+  .concept-mark img {
+    position: relative;
+    z-index: 1;
+    filter: drop-shadow(3px 7px 4px rgba(0,0,0,.76)) drop-shadow(10px 17px 13px rgba(0,0,0,.42));
+  }
+}
 .concept-actions {
   display: flex;
   justify-content: flex-start;
@@ -256,21 +297,22 @@ h2 span { color: var(--gold); }
 }
 
 @media (max-width: 720px) {
-  :root { --shell: calc(100% - 32px); --radius: 20px; --header-height: 64px; }
+  :root { --shell: calc(100% - 28px); --radius: 18px; --header-height: 60px; }
   .site-header { background: rgba(15,18,23,.88); backdrop-filter: blur(16px); }
-  .brand { font-size: 19px; }
-  .brand img { width: 34px; height: 34px; border-radius: 10px; }
-  .language-switch { padding: 8px 4px; font-size: 13px; }
+  .brand { font-size: 18px; }
+  .brand img { width: 32px; height: 32px; border-radius: 9px; }
+  .language-switch { padding: 8px 2px; font-size: 12px; }
   main { width: 100%; overflow: hidden; }
-  .concept-hero { padding-top: 100px; padding-bottom: 56px; background-position: 90% top; }
-  .concept-hero-inner { min-height: 660px; }
-  .concept-intro { min-height: 0; grid-template-columns: 1fr; gap: 16px; text-align: center; }
-  .concept-copy h1 { font-size: clamp(37px, 11vw, 46px); line-height: 1; }
-  .concept-lead { margin: 24px auto 0; font-size: 16px; line-height: 1.55; }
-  .concept-mark { width: 180px; justify-self: center; margin: 10px 0 0; transform: none; }
-  .concept-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-top: 18px; }
-  .concept-actions .button { min-height: 50px; padding-inline: 10px; font-size: 13px; }
-  .concept-proof { justify-content: center; gap: 10px 16px; font-size: 12px; }
+  .concept-hero { padding-top: 82px; padding-bottom: 34px; background-position: 86% top; }
+  .concept-hero-inner { min-height: 0; }
+  .concept-intro { min-height: 0; grid-template-columns: 1fr; gap: 8px; text-align: center; }
+  .concept-copy h1 { font-size: clamp(32px, 9.5vw, 39px); line-height: 1.04; }
+  .concept-gold { margin-top: 7px; }
+  .concept-lead { max-width: 35ch; margin: 17px auto 0; font-size: 14px; line-height: 1.48; }
+  .concept-mark { width: 132px; justify-self: center; margin: 3px 0 0; transform: none; }
+  .concept-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; margin-top: 15px; }
+  .concept-actions .button { min-height: 46px; padding-inline: 8px; border-radius: 12px; font-size: 12px; }
+  .concept-proof { justify-content: center; gap: 7px 13px; margin-top: 13px; font-size: 11px; }
   .hero { width: calc(100% - 36px); max-width: calc(100vw - 36px); padding-top: 123px; padding-bottom: 50px; }
   .eyebrow { margin-bottom: 18px; font-size: 11px; }
   h1 { font-size: clamp(43px, 12vw, 61px); }
@@ -288,27 +330,53 @@ h2 span { color: var(--gold); }
   .spark { right: 1%; top: 4%; }
   .vpn-note { bottom: 13px; font-size: 10px; }
   .trust-grid { grid-template-columns: 1fr 1fr; }
-  .trust-grid > div { min-height: 88px; padding: 17px 15px; border-bottom: 1px solid var(--line-soft); }
-  .trust-grid strong { font-size: 21px; }
-  .trust-grid span { font-size: 12px; }
-  .section { padding-block: 64px; }
-  h2 { font-size: clamp(33px, 9.8vw, 43px); }
-  .section-heading > p:last-child { font-size: 16px; }
-  .journey { margin-top: 50px; }
-  .journey-card { min-height: 330px; padding-inline: 22px; }
+  .trust-grid > div { min-height: 70px; padding: 11px 12px; border-bottom: 1px solid var(--line-soft); }
+  .trust-grid strong { font-size: 18px; }
+  .trust-grid span { margin-top: 4px; font-size: 11px; }
+  .section { padding-block: 44px; }
+  h2 { font-size: clamp(28px, 8.5vw, 35px); }
+  .section-heading > p:last-child { margin-top: 16px; font-size: 14px; line-height: 1.5; }
+  .journey { margin-top: 30px; gap: 10px; }
+  .journey-card { min-height: 240px; padding: 20px 18px; }
+  .step-number { width: 42px; height: 42px; font-size: 16px; }
+  .journey-copy { margin-top: 17px; }
+  .journey-copy h3 { font-size: 20px; }
+  .journey-copy p { margin-top: 9px; font-size: 14px; line-height: 1.5; }
   .feature-grid { grid-template-columns: 1fr; }
-  .feature-grid { margin-top: 34px; gap: 12px; }
-  .feature-card { min-height: 205px; padding: 24px; }
-  .feature-icon { margin-bottom: 24px; }
+  .feature-grid { margin-top: 25px; gap: 9px; }
+  .feature-card {
+    min-height: 0;
+    padding: 17px;
+    display: grid;
+    grid-template-columns: 38px minmax(0, 1fr);
+    grid-template-rows: auto auto;
+    column-gap: 13px;
+    row-gap: 6px;
+    border-radius: 16px;
+  }
+  .feature-icon { grid-row: 1 / span 2; width: 38px; height: 38px; margin: 0; border-radius: 11px; }
+  .feature-icon svg { width: 21px; height: 21px; }
+  .feature-card h3 { grid-column: 2; font-size: 19px; line-height: 1.2; }
+  .feature-card p { grid-column: 2; margin: 0; font-size: 13px; line-height: 1.48; }
   .gallery-one { transform: translateY(8px) rotate(-1.5deg); }
   .gallery-two { transform: translateY(-8px) rotate(1.5deg); }
-  .privacy-mark img { width: 140px; border-radius: 35px; }
-  .privacy-orbit { width: 230px; height: 230px; }
-  .check-list { grid-template-columns: 1fr; }
-  .download-card { min-height: 0; padding: 34px 24px 92px; gap: 28px; }
-  .download-spark { left: 30px; bottom: 32px; }
+  .privacy-layout { gap: 32px; }
+  .privacy-mark img { width: 96px; border-radius: 25px; }
+  .privacy-orbit { width: 165px; height: 165px; }
+  .privacy-copy > p:not(.eyebrow) { margin-top: 17px; font-size: 14px; line-height: 1.52; }
+  .check-list { grid-template-columns: 1fr; gap: 10px; margin: 23px 0; font-size: 14px; }
+  .download-section { padding-bottom: 58px; }
+  .download-card { min-height: 0; padding: 25px 20px 64px; gap: 20px; border-radius: 20px; }
+  .download-copy h2 { font-size: clamp(28px, 8.5vw, 35px); }
+  .download-copy > p:last-child { margin-top: 14px; font-size: 14px; line-height: 1.5; }
+  .download-spark { left: 24px; bottom: 23px; font-size: 28px; }
   .download-actions { align-items: stretch; }
-  .footer-inner { padding-block: 35px; flex-wrap: wrap; }
+  .button-large { min-height: 52px; }
+  .verification { margin-top: 16px; border-radius: 16px; }
+  .verification summary { padding: 16px 18px; font-size: 14px; }
+  .verification-grid { gap: 10px; padding: 0 16px 16px; }
+  .verification-grid > div { padding: 14px; }
+  .footer-inner { min-height: 0; padding-block: 26px; flex-wrap: wrap; gap: 20px; }
   .site-footer nav { width: 100%; margin-left: 0; gap: 20px; }
 }
 

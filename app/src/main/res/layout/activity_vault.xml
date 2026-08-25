@@ -219,6 +219,14 @@
     </LinearLayout>
 
     <Button
+        android:id="@+id/installApkButton"
+        style="@style/Widget.Liberty.Button.Secondary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/install_apk_from_browser" />
+
+    <Button
         android:id="@+id/changeLanguageButton"
         style="@style/Widget.Liberty.Button.Secondary"
         android:layout_width="match_parent"

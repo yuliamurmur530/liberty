@@ -57,6 +57,8 @@
     <string name="add_apps_help_body">Liberty откроет системный магазин защищённого профиля. Установленные там приложения будут отдельными копиями со значком портфеля. Не используйте «+» в системной папке: на некоторых телефонах он открывает личную копию приложения и не гарантирует изоляцию.</string>
     <string name="install_apps">Установить приложения</string>
     <string name="open_protected_store">Открыть защищённый магазин</string>
+    <string name="install_apk_from_browser">Разрешить установку APK из браузера</string>
+    <string name="unknown_sources_settings_unavailable">Android не смог открыть настройки установки неизвестных приложений.</string>
     <string name="lock_space">Экстренная блокировка</string>
     <string name="emergency_lock_title">Экстренно заблокировать пространство?</string>
     <string name="emergency_lock_body">Используйте эту функцию, если возник риск, что телефон окажется не рядом с вами. Защищённые приложения немедленно закроются. Для следующего входа Android попросит пароль, который вы задали для защищённого профиля.</string>

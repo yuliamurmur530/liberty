@@ -11,6 +11,7 @@ import android.net.Network;
 import android.net.NetworkCapabilities;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.util.LruCache;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -83,6 +84,9 @@ public final class VaultActivity extends BaseActivity {
         appsList.setOnItemClickListener((parent, view, position, id) -> launch(adapter.getItem(position)));
 
         addAppsButton.setOnClickListener(view -> showAddAppsHelp());
+        findViewById(R.id.installApkButton).setOnClickListener(
+                view -> openUnknownAppSourcesSettings()
+        );
         findViewById(R.id.changeLanguageButton).setOnClickListener(
                 view -> startActivity(new Intent(this, LanguageActivity.class))
         );
@@ -182,6 +186,26 @@ public final class VaultActivity extends BaseActivity {
             return;
         }
         startActivity(market);
+    }
+
+    private void openUnknownAppSourcesSettings() {
+        Intent intent = new Intent(Settings.ACTION_MANAGE_UNKNOWN_APP_SOURCES);
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+            return;
+        }
+
+        Intent fallback = new Intent(Settings.ACTION_SECURITY_SETTINGS);
+        if (fallback.resolveActivity(getPackageManager()) != null) {
+            startActivity(fallback);
+            return;
+        }
+
+        Toast.makeText(
+                this,
+                R.string.unknown_sources_settings_unavailable,
+                Toast.LENGTH_LONG
+        ).show();
     }
 
     private void launch(AppEntry entry) {

@@ -56,7 +56,7 @@ const translations = {
     privacyItemThree: "No access to other apps' data",
     privacyItemFour: "Source code available for review",
     readPrivacy: "Read the privacy policy <span aria-hidden=\"true\">↗</span>",
-    downloadEyebrow: "Liberty 0.4.9",
+    downloadEyebrow: "Liberty 0.5.0",
     downloadTitle: "Create your protected space.",
     downloadBody: "Your apps. Your rules. Only on your device.",
     downloadApk: "Download APK",

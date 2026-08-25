@@ -30,6 +30,13 @@ public final class SecurityPolicies {
                 admin,
                 context.getString(R.string.app_name)
         ));
+        // Liberty не решает за пользователя, откуда устанавливать приложения. Снимаем
+        // ограничение рабочего профиля, а разрешение конкретному браузеру пользователь
+        // выдаёт самостоятельно на системном экране Android.
+        applySafely(() -> policyManager.clearUserRestriction(
+                admin,
+                UserManager.DISALLOW_INSTALL_UNKNOWN_SOURCES
+        ));
         applySafely(() -> policyManager.addUserRestriction(
                 admin,
                 UserManager.DISALLOW_CROSS_PROFILE_COPY_PASTE

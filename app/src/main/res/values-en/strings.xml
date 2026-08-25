@@ -57,6 +57,8 @@
     <string name="add_apps_help_body">Liberty will open the system store inside the protected profile. Apps installed there are separate copies with a briefcase badge. Do not use the “+” in a system folder: on some phones it opens the personal copy and does not guarantee isolation.</string>
     <string name="install_apps">Install apps</string>
     <string name="open_protected_store">Open protected store</string>
+    <string name="install_apk_from_browser">Allow APK installation from a browser</string>
+    <string name="unknown_sources_settings_unavailable">Android could not open the unknown-app installation settings.</string>
     <string name="lock_space">Emergency lock</string>
     <string name="emergency_lock_title">Emergency-lock the protected space?</string>
     <string name="emergency_lock_body">Use this if there is a risk that your phone may no longer be near you. Protected apps will close immediately. The next time you enter, Android will ask for the password you set for the protected profile.</string>
