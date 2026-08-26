@@ -3,6 +3,8 @@ package net.crinoidea.liberty.admin;
 import android.app.admin.DevicePolicyManager;
 import android.content.ComponentName;
 import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 import android.os.UserManager;
 
@@ -67,8 +69,11 @@ public final class SecurityPolicies {
                 DevicePolicyManager.PERMISSION_POLICY_PROMPT
         ));
 
-        // Удаляем фильтр передачи списка приложений, который использовался в ранних версиях.
+        // Удаляем фильтры Liberty предыдущей версии и возвращаем только явную отправку,
+        // инициированную пользователем через системное меню «Поделиться». Это не открывает
+        // приложениям защищённого профиля список программ личного профиля.
         applySafely(() -> policyManager.clearCrossProfileIntentFilters(admin));
+        applySafely(() -> allowExplicitSharingToParent(policyManager, admin));
 
         // Пользователь должен иметь возможность сохранять чеки. Liberty не блокирует снимки экрана.
         applySafely(() -> policyManager.setScreenCaptureDisabled(admin, false));
@@ -121,5 +126,37 @@ public final class SecurityPolicies {
             // Производители Android поддерживают разные наборы политик. Отказ одной политики
             // не должен прерывать создание или запуск защищённого пространства.
         }
+    }
+
+    private static void allowExplicitSharingToParent(
+            DevicePolicyManager policyManager,
+            ComponentName admin
+    ) {
+        addShareFilter(policyManager, admin, Intent.ACTION_SEND, true);
+        addShareFilter(policyManager, admin, Intent.ACTION_SEND, false);
+        addShareFilter(policyManager, admin, Intent.ACTION_SEND_MULTIPLE, true);
+        addShareFilter(policyManager, admin, Intent.ACTION_SEND_MULTIPLE, false);
+    }
+
+    private static void addShareFilter(
+            DevicePolicyManager policyManager,
+            ComponentName admin,
+            String action,
+            boolean withMimeType
+    ) {
+        IntentFilter filter = new IntentFilter(action);
+        filter.addCategory(Intent.CATEGORY_DEFAULT);
+        if (withMimeType) {
+            try {
+                filter.addDataType("*/*");
+            } catch (IntentFilter.MalformedMimeTypeException impossible) {
+                throw new IllegalStateException(impossible);
+            }
+        }
+        policyManager.addCrossProfileIntentFilter(
+                admin,
+                filter,
+                DevicePolicyManager.FLAG_PARENT_CAN_ACCESS_MANAGED
+        );
     }
 }

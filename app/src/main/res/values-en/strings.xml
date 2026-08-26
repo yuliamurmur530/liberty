@@ -18,7 +18,7 @@
     <string name="profile_ready_title">Your protected space is ready</string>
     <string name="profile_ready_body">Apps in the protected profile are kept separate from the rest and open through Liberty.</string>
     <string name="profile_open_title">Everything is ready</string>
-    <string name="profile_open_body">Tap “Open protected space”. Android may show protected apps in a separate folder, on a Work tab, or as briefcase-badged icons on the regular home screen—the phone launcher decides this. The apps remain isolated in every case. Install them through the briefcase-badged Google Play inside Liberty.</string>
+    <string name="profile_open_body">Tap “Open protected space”. Android may show protected apps in a separate folder, on a Work tab, or as briefcase-badged icons on the regular home screen—the phone launcher decides this. The apps remain isolated in every case. Install new apps through a briefcase-badged store. An app that is already installed can be added with the system “Add” or “+” button if its new icon receives a briefcase badge.</string>
     <string name="open_protected_space">Open protected space</string>
     <string name="opening_protected_space">Opening…</string>
     <string name="open_protected_space_failed">Automatic opening did not work. Find the briefcase-badged Liberty app in your app list — that is your protected space.</string>
@@ -34,7 +34,7 @@
     <string name="data_note">Liberty does not transmit data outside your phone.</string>
     <string name="vault_title">Protected space</string>
     <string name="security_active">PROTECTION ACTIVE</string>
-    <string name="security_summary">No VPN in Liberty · No data transmission · Separate apps and accounts</string>
+    <string name="security_summary">No VPN in Liberty · Liberty sends nothing by itself · Sharing works only when you choose it</string>
     <string name="security_attention">PROTECTION NEEDS ATTENTION</string>
     <string name="security_attention_summary">Android did not confirm every isolation rule. Restart Liberty. If the warning remains, do not launch protected apps on this device.</string>
     <string name="protection_launch_blocked_title">Protection not confirmed</string>
@@ -54,7 +54,7 @@
     <string name="protected_apps_location_note">Scroll down to see every app. Android may show them in a folder, on a Work tab, or as briefcase-badged icons.</string>
     <string name="add_apps">Install apps</string>
     <string name="add_apps_help_title">Install an isolated app</string>
-    <string name="add_apps_help_body">Liberty will open the system store inside the protected profile. Apps installed there are separate copies with a briefcase badge. Do not use the “+” in a system folder: on some phones it opens the personal copy and does not guarantee isolation.</string>
+    <string name="add_apps_help_body">If the app is not on the phone yet, install it through a briefcase-badged store or browser. If it already exists in the personal profile and the store says “already installed”, open the system folder or Work tab and tap “Add” or “+”. Android will add the app to the protected profile with separate data. Make sure the new icon has a briefcase badge.</string>
     <string name="install_apps">Install apps</string>
     <string name="open_protected_store">Open protected store</string>
     <string name="install_apk_from_browser">Allow APK installation from a browser</string>
@@ -91,14 +91,14 @@
     <string name="vault_language_settings">Language / Язык</string>
     <string name="privacy_settings">Privacy</string>
     <string name="privacy_title">Privacy policy</string>
-    <string name="privacy_updated">Updated August 23, 2026</string>
+    <string name="privacy_updated">Updated August 26, 2026</string>
     <string name="privacy_intro">Liberty is built around data minimization. It requires no registration and creates no user account.</string>
     <string name="privacy_collection_title">We do not collect data</string>
     <string name="privacy_collection_body">Liberty has no internet permission, includes no advertising, analytics, or trackers, and sends no personal data, app list, or user activity to the developer or any third party.</string>
     <string name="privacy_local_title">Local settings only</string>
     <string name="privacy_local_body">Your language choice and acknowledgment of this policy are stored on the phone. Liberty does not store a list of protected-space apps. Before launching an app, Liberty locally checks whether Android reports a VPN or HTTP proxy on the active network; the result is neither stored nor transmitted. If you choose, Liberty temporarily receives the selected Google Account name from the system picker and passes it to Android provisioning; Liberty never receives the password or stores the account name.</string>
     <string name="privacy_profile_title">What Liberty does</string>
-    <string name="privacy_profile_body">With your explicit confirmation, Liberty asks Android to create a separate system area (a work profile) and applies isolation policies. Liberty can open the system store inside the protected profile, but it does not install apps without user confirmation. Liberty cannot read passwords, personal data, or protected-app content.</string>
+    <string name="privacy_profile_body">With your explicit confirmation, Liberty asks Android to create a separate system area (a work profile) and applies isolation policies. Liberty can open the system store inside the protected profile, but it does not install apps without user confirmation. When the user explicitly taps Share and selects a personal app, Android transfers only the selected item; Liberty does not receive or store it. Liberty cannot read passwords, personal data, or protected-app content.</string>
     <string name="privacy_third_party_title">Third-party apps</string>
     <string name="privacy_third_party_body">Apps in the protected space operate under their own terms and privacy policies. Their network traffic does not pass through Liberty.</string>
     <string name="privacy_control_title">You remain in control</string>
